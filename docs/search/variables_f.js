@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['scope',['scope',['../eosc_8dox.html#a2c4c54e7eeee8a40f53dcbfde0dcab27',1,'eosc.dox']]],
-  ['signatures',['signatures',['../eosc_8dox.html#aa310f5ce702670d4a6848f2dfefcd906',1,'eosc.dox']]],
-  ['social',['social',['../struct_account.html#a9b3193bc138c923876e5f598bfd7897b',1,'Account']]],
-  ['social_5fpower',['social_power',['../struct_account.html#aa9dfb41c50dc90cbb590f3902b35d6a3',1,'Account']]],
-  ['staked_5fbalance',['staked_balance',['../eosc_8dox.html#a368a626b05f5ae8a03a0e41d2d8354f5',1,'eosc.dox']]],
-  ['sync_5ftransactions',['sync_transactions',['../eosc_8dox.html#ac0629d8b3e4b4902b3a7dbc656aa5b91',1,'eosc.dox']]]
+  ['quantity',['quantity',['../group__currencyapi.html#ga2892db9fb7756afd55846ef6979406e4',1,'TOKEN_NAME::Transfer::quantity()'],['../structeos_1_1token.html#a3daddb64094c45d8f51897aabd44ba3d',1,'eosio::token::quantity()'],['../structinfinite_1_1_transfer.html#a7bb1f54a3a58f42f067d9a020c900ddf',1,'infinite::Transfer::quantity()'],['../group__storageapi.html#ga459112cbf883226edcb02b35a674ddcd',1,'TOKEN_NAME::Transfer::quantity()']]]
 ];

@@ -1,6 +1,10 @@
+/**
+ *  @file
+ *  @copyright defined in eos/LICENSE.txt
+ */
 #pragma once
 #include <eoslib/types.h>
-
+extern "C" {
 /**
  *  This method is implemented as:
  *
@@ -16,4 +20,4 @@ void assert_sha256( char* data, uint32_t length, const uint256* hash );
  *  Calculates sha256( data,length) and stores result in memory pointed to by hash 
  */
 void sha256( char* data, uint32_t length, uint256* hash );
-
+}

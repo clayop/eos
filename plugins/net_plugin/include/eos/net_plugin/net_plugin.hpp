@@ -1,8 +1,12 @@
+/**
+ *  @file
+ *  @copyright defined in eos/LICENSE.txt
+ */
 #pragma once
 #include <appbase/application.hpp>
 #include <eos/chain_plugin/chain_plugin.hpp>
 
-namespace eos {
+namespace eosio {
    using namespace appbase;
 
    class net_plugin : public appbase::plugin<net_plugin>
@@ -19,7 +23,6 @@ namespace eos {
         void plugin_shutdown();
 
         void broadcast_block(const chain::signed_block &sb);
-        void broadcast_transaction (const chain::SignedTransaction &txn);
 
       private:
         std::unique_ptr<class net_plugin_impl> my;

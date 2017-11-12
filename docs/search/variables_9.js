@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['postid',['postid',['../struct_post_action.html#a6a2f4331e759c5b263202664631ff5fe',1,'PostAction::postid()'],['../struct_vote_action.html#a074d55875f77924c4bf9cd53c92eefa8',1,'VoteAction::postid()']]],
-  ['precision',['precision',['../structeos_1_1price.html#acc37f49e03b96f6ca1642a937280a533',1,'eos::price']]]
+  ['key',['key',['../group__currencyapi.html#gaf828b3fc2f24217280b1649078f56361',1,'TOKEN_NAME::Account::key()'],['../structinfinite_1_1_account.html#a8d8bddac673b236b04a576f15c99008c',1,'infinite::Account::key()']]]
 ];

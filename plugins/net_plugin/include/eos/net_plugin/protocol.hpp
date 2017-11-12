@@ -1,17 +1,16 @@
 #pragma once
 #include <eos/chain/block.hpp>
 #include <eos/chain/types.hpp>
+#include <chrono>
 
-namespace eos {
+namespace eosio {
    using namespace chain;
    using namespace fc;
 
-  using node_id_type = fc::sha256;
-
-   struct handshake_message {
+  struct handshake_message {
       int16_t         network_version = 0;
       chain_id_type   chain_id; ///< used to identify chain
-      node_id_type    node_id; ///< used to identify peers and prevent self-connect
+      fc::sha256      node_id; ///< used to identify peers and prevent self-connect
       string          p2p_address;
       uint32_t        last_irreversible_block_num = 0;
       block_id_type   last_irreversible_block_id;
@@ -19,25 +18,102 @@ namespace eos {
       block_id_type   head_id;
       string          os;
       string          agent;
+      int16_t         generation;
    };
 
-   struct notice_message {
-      vector<transaction_id_type> known_trx;
-      vector<block_id_type>       known_blocks;
-      vector<node_id_type>        known_to;
+  enum go_away_reason {
+    no_reason, ///< no reason to go away
+    self, ///< the connection is to itself
+    duplicate, ///< the connection is redundant
+    wrong_chain, ///< the peer's chain id doesn't match
+    wrong_version, ///< the peer's network version doesn't match
+    forked, ///< the peer's irreversible blocks are different
+    unlinkable, ///< the peer sent a block we couldn't use
+    bad_transaction ///< the peer sent a transaction that failed verification
+  };
+
+  const string reason_str( go_away_reason rsn ) {
+    switch (rsn ) {
+    case no_reason : return "no reason";
+    case self : return "self connect";
+    case duplicate : return "duplicate";
+    case wrong_chain : return "wrong chain";
+    case wrong_version : return "wrong version";
+    case forked : return "chain is forked";
+    case unlinkable : return "unlinkable block received";
+    case bad_transaction : return "bad transaction";
+    default : return "some crazy reason";
+    }
+  }
+
+  struct go_away_message {
+    go_away_message (go_away_reason r = no_reason) : reason(r), node_id() {}
+    go_away_reason reason;
+    fc::sha256 node_id; ///< for duplicate notification
+  };
+
+   typedef std::chrono::system_clock::duration::rep tstamp;
+   typedef int32_t                                  tdist;
+
+   static_assert(sizeof(std::chrono::system_clock::duration::rep) >= 8, "system_clock is expected to be at least 64 bits");
+
+   struct time_message {
+              tstamp  org;       //!< origin timestamp
+              tstamp  rec;       //!< receive timestamp
+              tstamp  xmt;       //!< transmit timestamp
+      mutable tstamp  dst;       //!< destination timestamp
    };
 
+  enum id_list_modes {
+    none,
+    catch_up,
+    normal
+  };
 
-   struct request_message {
-      vector<transaction_id_type> req_trx;
-      vector<block_id_type>       req_blocks;
-   };
+  const string modes_str( id_list_modes m ) {
+    switch( m ) {
+    case none : return "none";
+    case catch_up : return "catch up";
+    case normal : return "normal";
+    default: return "undefined mode";
+    }
+  }
 
+  template<typename T>
+  struct select_ids {
+    id_list_modes  mode;
+    uint32_t       pending;
+    vector<T>      ids;
+    bool           empty () const { return (mode == none || ids.empty()); }
+  };
+
+  using ordered_txn_ids = select_ids<transaction_id_type>;
+  using ordered_blk_ids = select_ids<block_id_type>;
+
+  struct notice_message {
+    ordered_txn_ids known_trx;
+    ordered_blk_ids known_blocks;
+  };
+
+  struct request_message {
+    ordered_txn_ids req_trx;
+    ordered_blk_ids req_blocks;
+  };
+
+  struct processed_trans_summary {
+    transaction_id_type id;
+    vector<message_output> outmsgs;
+  };
+
+  struct thread_ids {
+    vector<transaction_id_type> gen_trx; // is this necessary to send?
+    vector<processed_trans_summary> user_trx;
+  };
+
+  using cycle_ids = vector<thread_ids>;
    struct block_summary_message {
-      signed_block                block;
-      vector<transaction_id_type> trx_ids;
-      vector<node_id_type>        known_to;
-
+      signed_block_header         block_header;
+      vector<cycle_ids>           trx_ids;
    };
 
    struct sync_request_message {
@@ -45,38 +121,33 @@ namespace eos {
       uint32_t end_block;
    };
 
-   struct peer_message {
-     vector<node_id_type> peers;
-   };
-
    using net_message = static_variant<handshake_message,
-                                      peer_message,
+                                      go_away_message,
+                                      time_message,
                                       notice_message,
                                       request_message,
                                       sync_request_message,
                                       block_summary_message,
-                                      SignedTransaction,
+                                      signed_transaction,
                                       signed_block>;
 
-  using forward_message = static_variant<peer_message,
-                                         notice_message,
-                                         block_summary_message>;
+} // namespace eosio
 
-} // namespace eos
-
-
-FC_REFLECT( eos::handshake_message,
+FC_REFLECT( eosio::select_ids<fc::sha256>, (mode)(pending)(ids) )
+FC_REFLECT( eosio::handshake_message,
             (network_version)(chain_id)(node_id)
             (p2p_address)
             (last_irreversible_block_num)(last_irreversible_block_id)
             (head_num)(head_id)
-            (os)(agent) )
-
-FC_REFLECT( eos::block_summary_message, (block)(trx_ids) )
-FC_REFLECT( eos::notice_message, (known_trx)(known_blocks)(known_to) )
-FC_REFLECT( eos::request_message, (req_trx)(req_blocks) )
-FC_REFLECT( eos::sync_request_message, (start_block)(end_block) )
-FC_REFLECT( eos::peer_message, (peers) )
+            (os)(agent)(generation) )
+FC_REFLECT( eosio::go_away_message, (reason)(node_id) )
+FC_REFLECT( eosio::time_message, (org)(rec)(xmt)(dst) )
+FC_REFLECT( eosio::processed_trans_summary, (id)(outmsgs) )
+FC_REFLECT( eosio::thread_ids, (gen_trx)(user_trx) )
+FC_REFLECT( eosio::block_summary_message, (block_header)(trx_ids) )
+FC_REFLECT( eosio::notice_message, (known_trx)(known_blocks) )
+FC_REFLECT( eosio::request_message, (req_trx)(req_blocks) )
+FC_REFLECT( eosio::sync_request_message, (start_block)(end_block) )
 
 /**
  *
@@ -137,7 +208,7 @@ State:
         send of another request.
 
      Once you have caught up to all peers, notify all peers of your head block so they know that you
-     know the LIB and will start sending you real time tranasctions
+     know the LIB and will start sending you real time transactions
 
 parallel fetches, request in groups
 

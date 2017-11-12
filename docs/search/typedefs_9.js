@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['uint128_5ft',['uint128_t',['../types_8h.html#a396787e5ec029b1205bd3e4cd9763e7d',1,'types.h']]],
-  ['uint32_5ft',['uint32_t',['../types_8h.html#a06896e8c53f721507066c079052171f8',1,'types.h']]],
-  ['uint64_5ft',['uint64_t',['../types_8h.html#aaa5d1cd013383c889537491c3cfd9aad',1,'types.h']]],
-  ['uint8_5ft',['uint8_t',['../types_8h.html#aba7bc1797add20fe3efdf37ced1182c5',1,'types.h']]]
+  ['permissionname',['PermissionName',['../group__types.html#ga4bd93be9c597a8d7b6a1a3504ca63e83',1,'types.h']]],
+  ['price',['Price',['../namespaceexchange.html#a0336f5f2902c9a988382211e8b2c5902',1,'exchange']]],
+  ['primary',['Primary',['../struct_var_table.html#ad4afbcdf0a29800aeb5f45772265f8c7',1,'VarTable::Primary()'],['../struct_table.html#ad9f8ffd200f4ec978d980c671d18f93f',1,'Table::Primary()'],['../struct_table_3_01scope_00_01code_00_01table_00_01_record_00_01_primary_type_00_01void_01_4.html#af6686d4a11f2e9d38c9aa19e97633391',1,'Table&lt; scope, code, table, Record, PrimaryType, void &gt;::Primary()']]]
 ];

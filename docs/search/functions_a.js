@@ -1,10 +1,23 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../structeos_1_1token.html#a8d96a755a83893ec14fbaa4e49b99d65',1,'eos::token']]],
-  ['operator_20uint64_5ft',['operator uint64_t',['../structeos_1_1uint128.html#adb13ba2866af412d30c0e3d05b5f417e',1,'eos::uint128::operator uint64_t()'],['../structeos_1_1_name.html#a0a0e724ce7e1b35aa1e5d32b32b6df0e',1,'eos::Name::operator uint64_t()']]],
-  ['operator_2a_3d',['operator*=',['../structeos_1_1uint128.html#ae8d57afaf0502b47c8ac41233d89c569',1,'eos::uint128::operator*=(const uint128_t &amp;other)'],['../structeos_1_1uint128.html#ada42f9d84627e4adf00223f358c7fea9',1,'eos::uint128::operator*=(const uint128 &amp;other)']]],
-  ['operator_2b_3d',['operator+=',['../structeos_1_1token.html#a400602797c1a859ab0e43b7b1faf6225',1,'eos::token']]],
-  ['operator_2d_3d',['operator-=',['../structeos_1_1token.html#a40d6e8c526c6b1050f7b3e3e18db2952',1,'eos::token']]],
-  ['operator_2f_3d',['operator/=',['../structeos_1_1uint128.html#a06e6004ec5fbff36e58c029621cc56b9',1,'eos::uint128::operator/=(const uint128_t &amp;other)'],['../structeos_1_1uint128.html#a206b11960fbca128af563bdc57e8d573',1,'eos::uint128::operator/=(const uint128 &amp;other)']]],
-  ['operator_3c_3c',['operator&lt;&lt;',['../group__console_cppapi.html#gad4459f4a84575efe71fa3637298b8510',1,'eos']]]
+  ['malloc',['malloc',['../group__memorycppapi.html#ga733d053a4e90451886d476e7f560bf9c',1,'eos']]],
+  ['match',['match',['../namespaceexchange.html#aeef884b3f23cf9d6bbf03e46550a3756',1,'exchange']]],
+  ['max',['max',['../group__mathcppapi.html#ga422f063ec99a30ab7a395f0fafeffcb2',1,'eos']]],
+  ['memcmp',['memcmp',['../group__memorycapi.html#ga174f86fdde222a278e5524a8aea63da9',1,'memory.h']]],
+  ['memcpy',['memcpy',['../group__memorycapi.html#ga59ed1449718a3c27f7622cb3efb845af',1,'memory.h']]],
+  ['memory_5fmanager',['memory_manager',['../classeos_1_1memory__manager.html#a4f6bd9f529fa026f54b68474d3433ac0',1,'eosio::memory_manager']]],
+  ['memset',['memset',['../group__memorycapi.html#gad8eef9133e11fe77cd34792771f81761',1,'memory.h']]],
+  ['message',['Message',['../classeos_1_1_message.html#a356a9c3596b63f6c76350252427aaee6',1,'eosio::Message::Message(const AccountName &amp;code, const FuncName &amp;type, const Payload &amp;payload, Permissions...permissions)'],['../classeos_1_1_message.html#a36ea35d105db634bd74ae7170bfc5297',1,'eosio::Message::Message(const AccountName &amp;code, const FuncName &amp;type, const Payload &amp;payload)'],['../classeos_1_1_message.html#a2858265f85675233cd4efbb934c4631a',1,'eosio::Message::Message(const AccountName &amp;code, const FuncName &amp;type)'],['../classeos_1_1_message.html#a74eb5d1741b0ce6ac29161352d9565b7',1,'eosio::Message::Message(const Message &amp;)=delete'],['../classeos_1_1_message.html#aa05ef1b00fd732601bca906ff883b425',1,'eosio::Message::Message(Message &amp;&amp;msg)']]],
+  ['messagecreate',['messageCreate',['../group__transactioncapi.html#ga6940a3e31486bef36409f857e0ed7c72',1,'transaction.h']]],
+  ['messagedrop',['messageDrop',['../group__transactioncapi.html#ga77f1412808c199633b41bf2f20e3cb45',1,'transaction.h']]],
+  ['messagerequirepermission',['messageRequirePermission',['../group__transactioncapi.html#gabf3f53f695c30abe4bd48f9b3341a016',1,'transaction.h']]],
+  ['messagesend',['messageSend',['../group__transactioncapi.html#ga1f9346e3ef3fae10cf5fee5b9a0270ca',1,'transaction.h']]],
+  ['messagesize',['messageSize',['../group__messagecapi.html#gaa4e5f3cd4b54bccaa36e755caecda727',1,'message.h']]],
+  ['min',['min',['../group__mathcppapi.html#ga8cfe8cb6da0460d4502c320025bbd9c8',1,'eos']]],
+  ['modifyaccount',['modifyAccount',['../namespaceexchange.html#abbb79e5408239e3a7c12a2c79b69db62',1,'exchange']]],
+  ['multeq',['multeq',['../group__mathcppapi.html#ga23801e95fdf200a183909b3f4e819680',1,'eos']]],
+  ['multeq_5fi128',['multeq_i128',['../group__mathcapi.html#ga61d571f58c24fb4663cc3729f3d5613e',1,'math.h']]],
+  ['my_5fmemcmp',['my_memcmp',['../test__crypto_8cpp.html#ab7d8481ae8a9f7185f73c4454c3dae57',1,'my_memcmp(void *s1, void *s2, uint32_t n):&#160;test_crypto.cpp'],['../test__db_8cpp.html#ab7d8481ae8a9f7185f73c4454c3dae57',1,'my_memcmp(void *s1, void *s2, uint32_t n):&#160;test_crypto.cpp']]],
+  ['my_5fmemset',['my_memset',['../test__db_8cpp.html#ae6b47dcb272f3e27634412e42c4e3107',1,'test_db.cpp']]],
+  ['my_5fstrlen',['my_strlen',['../test__crypto_8cpp.html#ab21a7927a82571cd1ecffebcd7d255ac',1,'my_strlen(const char *str):&#160;test_crypto.cpp'],['../test__db_8cpp.html#ab21a7927a82571cd1ecffebcd7d255ac',1,'my_strlen(const char *str):&#160;test_crypto.cpp']]]
 ];

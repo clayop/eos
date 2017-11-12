@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['readmessage',['readMessage',['../group__messagecapi.html#ga95a7d555722669cdeb72d6d6d1236893',1,'message.h']]],
-  ['remove',['remove',['../structtable__impl_3_01sizeof_07uint128__t_08_00_01sizeof_07uint128__t_08_4.html#a532c370ad02543b73ed4403ac5cbfd45',1,'table_impl&lt; sizeof(uint128_t), sizeof(uint128_t)&gt;::remove()'],['../structtable__impl_3_01sizeof_07uint64__t_08_00_010_01_4.html#a7c530f4caf01a798cc0691a3d2c89bc2',1,'table_impl&lt; sizeof(uint64_t), 0 &gt;::remove()'],['../struct_table_1_1_primary_index.html#aba7ece128f93aebac142318bf62a81a8',1,'Table::PrimaryIndex::remove()'],['../struct_table_1_1_secondary_index.html#a5b45ffa299bf76615d2df5a7e03aeb00',1,'Table::SecondaryIndex::remove()'],['../struct_table.html#a5bf44e6ccd8eb3cb1cae84b50afccc95',1,'Table::remove()'],['../struct_table_3_01scope_00_01code_00_01table_00_01_record_00_01_primary_type_00_01void_01_4_1_1_primary_index.html#a88d1097b8bcd991a7bd8a0519719ea5c',1,'Table&lt; scope, code, table, Record, PrimaryType, void &gt;::PrimaryIndex::remove()'],['../struct_table_3_01scope_00_01code_00_01table_00_01_record_00_01_primary_type_00_01void_01_4.html#a0f4509d1612728dca40ae1d5bc5bef9c',1,'Table&lt; scope, code, table, Record, PrimaryType, void &gt;::remove()']]],
-  ['remove_5fi128i128',['remove_i128i128',['../group__dbi128i128.html#ga009f657d62e412569d5986a6e96292c5',1,'db.h']]],
-  ['remove_5fi64',['remove_i64',['../group__dbi64.html#ga7b2d0b1e8f0ac325a5c78e94ab87d180',1,'db.h']]],
-  ['requireauth',['requireAuth',['../group__messagecapi.html#gaed0ef9b019ed08c7cc0241c5b4169f13',1,'message.h']]],
-  ['requirenotice',['requireNotice',['../group__messagecapi.html#ga993633916da61f395c03440e17d720ff',1,'requireNotice():&#160;message.h'],['../group__messagecppapi.html#ga949563fd4a436805bb61fba6d0418e23',1,'eos::requireNotice()']]]
+  ['operator_20bool',['operator bool',['../structeos_1_1token.html#a3783762ae9a1dd9c5bd4d6cacf1b15ac',1,'eosio::token']]],
+  ['operator_20uint64_5ft',['operator uint64_t',['../structeos_1_1uint128.html#a42c6390eb938c1025e8a4590079a3912',1,'eosio::uint128::operator uint64_t()'],['../structeos_1_1_name.html#ac3926ad20f7e040be388f77f7f8beb70',1,'eosio::Name::operator uint64_t()']]],
+  ['operator_2a_3d',['operator*=',['../structeos_1_1uint128.html#ae8d57afaf0502b47c8ac41233d89c569',1,'eosio::uint128::operator*=(const uint128_t &amp;other)'],['../structeos_1_1uint128.html#ada42f9d84627e4adf00223f358c7fea9',1,'eosio::uint128::operator*=(const uint128 &amp;other)']]],
+  ['operator_2b_3d',['operator+=',['../classeos_1_1string.html#a0a12d39139e4dbae7b0c88e02193f533',1,'eosio::string::operator+=()'],['../structeos_1_1token.html#a400602797c1a859ab0e43b7b1faf6225',1,'eosio::token::operator+=()']]],
+  ['operator_2d_3d',['operator-=',['../structeos_1_1token.html#a40d6e8c526c6b1050f7b3e3e18db2952',1,'eosio::token']]],
+  ['operator_2f_3d',['operator/=',['../structeos_1_1uint128.html#a06e6004ec5fbff36e58c029621cc56b9',1,'eosio::uint128::operator/=(const uint128_t &amp;other)'],['../structeos_1_1uint128.html#a206b11960fbca128af563bdc57e8d573',1,'eosio::uint128::operator/=(const uint128 &amp;other)']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../group__console_cppapi.html#gad4459f4a84575efe71fa3637298b8510',1,'eos']]],
+  ['operator_3d',['operator=',['../classeos_1_1string.html#a2e571d8e0ba60930c38bb91874ae42c9',1,'eosio::string']]],
+  ['operator_5b_5d',['operator[]',['../classeos_1_1string.html#ab03ec98576f7bd0cba8ce356b4314e56',1,'eosio::string']]]
 ];

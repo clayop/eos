@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['tester',['tester',['../eosc_8dox.html#a5d3b1dcb9546ab2dfafaafd4b761ef0c',1,'eosc.dox']]],
-  ['to',['to',['../struct_t_o_k_e_n___n_a_m_e_1_1_transfer.html#a75350616e02bd681c0e8b12ca4cf7a38',1,'TOKEN_NAME::Transfer::to()'],['../structeos_1_1_transfer.html#a034713fef29af790067be03d2f12d39b',1,'eos::Transfer::to()'],['../structsystem_1_1_transfer.html#a9c129ff0554816d5c8e8594f116dd0b0',1,'system::Transfer::to()'],['../eosc_8dox.html#aebe1d74bdd490f47c90f6cd6541d2f07',1,'to():&#160;eosc.dox']]],
-  ['total_5fvotes',['total_votes',['../struct_post_record.html#aca901b24573f6a0bf3e1058b197b6174',1,'PostRecord']]],
-  ['type',['type',['../eosc_8dox.html#acedf5e2bfd93a455e4c8c22deb143e80',1,'eosc.dox']]]
+  ['reply_5fto_5fauthor',['reply_to_author',['../struct_post_action.html#abf9cfe14896ee4c46f96946150d1d000',1,'PostAction']]],
+  ['reply_5fto_5fid',['reply_to_id',['../struct_post_action.html#a44dd78c6c6386998dd58b8613c972755',1,'PostAction']]],
+  ['reveal',['reveal',['../structdice_1_1_player.html#a1fcc6b53309688f54e038ea5f8f58939',1,'dice::Player']]],
+  ['row',['row',['../structtic__tac__toe_1_1_movement.html#a1ef3e54df0d86a523ecd7d2a5acad528',1,'tic_tac_toe::Movement']]]
 ];

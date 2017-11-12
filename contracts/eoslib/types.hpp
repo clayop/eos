@@ -1,16 +1,22 @@
+/**
+ *  @file
+ *  @copyright defined in eos/LICENSE.txt
+ */
 #pragma once
 #include <eoslib/types.h>
-  
-namespace  eos {
+
+namespace  eosio {
 
    /**
     *  Converts a base32 symbol into its binary representation, used by string_to_name()
+    *
+    *  @ingroup types
     */
    static constexpr char char_to_symbol( char c ) {
       if( c >= 'a' && c <= 'z' )
-         return (c - 'a') + 1;
+         return (c - 'a') + 6;
       if( c >= '1' && c <= '5' )
-         return (c - '1') + 27;
+         return (c - '1') + 1;
       return 0;
    }
 
@@ -49,24 +55,27 @@ namespace  eos {
     * @brief used to generate a compile time uint64_t from the base32 encoded string interpretation of X
     * @ingroup types
     */
-   #define N(X) ::eos::string_to_name(#X)
+   #define N(X) ::eosio::string_to_name(#X)
 
    /**
-    *  @class Name
-    *  @brief wraps a uint64_t to ensure it is only passed to methods that expect a Name and
+    *  @class name
+    *  @brief wraps a uint64_t to ensure it is only passed to methods that expect a Name
+    *  @details wraps a uint64_t to ensure it is only passed to methods that expect a Name and
     *         that no mathematical operations occur.  It also enables specialization of print
     *         so that it is printed as a base32 string.
     *
     *  @ingroup types
+    *  @{
     */
-   struct Name {
-      Name( uint64_t v = 0 ): value(v) {}
+   struct name {
+      name( uint64_t v = 0 ): value(v) {}
       operator uint64_t()const { return value; }
 
-      friend bool operator==( const Name& a, const Name& b ) { return a.value == b.value; }
-      AccountName value = 0;
+      friend bool operator==( const name& a, const name& b ) { return a.value == b.value; }
+      account_name value = 0;
    };
 
+   /// @}
 
    /**
     * @ingroup types

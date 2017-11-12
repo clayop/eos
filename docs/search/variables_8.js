@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['name',['name',['../structexchange_1_1_order_i_d.html#ace33e68445f307e12c36b69c55edc526',1,'exchange::OrderID']]],
-  ['number',['number',['../structexchange_1_1_order_i_d.html#a7e557eea50518e99975b511f27e16eb2',1,'exchange::OrderID']]]
+  ['infinite_5fwast',['infinite_wast',['../infinite_8wast_8hpp.html#aba0b267b9203736da01ac9857840672e',1,'infinite.wast.hpp']]]
 ];
